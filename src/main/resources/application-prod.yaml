@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: telegram-scheduler
+
+telegram:
+  bot-token: "7243786455:AAEC-fiu6dxcraM4jz1Sw_kBulH2tGvQKD8"
+  chat-id: "-4624937933"
+
+server:
+  port: 8088
