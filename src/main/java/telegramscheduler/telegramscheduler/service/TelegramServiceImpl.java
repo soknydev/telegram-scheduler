@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 public class TelegramServiceImpl extends TelegramService {
 
     // Scheduled messages for specific times
-    @Scheduled(cron = "0 55 1 * * ?") // Every day at 1:15 AM
+    @Scheduled(cron = "0 57 1 * * ?") // Every day at 1:15 AM
     public void sendMessage() {
         sendMessage("សួស្ដី ម៉ោងជិត2លូវហើយ កាលបានដេក");
         log.info("Message: សួស្ដី");
