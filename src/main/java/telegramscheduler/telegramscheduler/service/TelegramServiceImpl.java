@@ -8,6 +8,17 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class TelegramServiceImpl extends TelegramService {
 
+    private int counter = 0;
+
+    // Send a message every 10 seconds (Alternating hello, hello, hi)
+    @Scheduled(fixedRate = 10000)
+    public void sendScheduledMessage() {
+        String message = (counter % 3 == 0 || counter % 3 == 1) ? "hello" : "hi";
+        sendMessage(message);
+        System.out.println("Message sent: " + message);
+        counter++;
+    }
+
     // Scheduled messages for specific times
     @Scheduled(cron = "0 5 2 * * ?") // Every day at 1:15 AM
     public void sendMessage() {
