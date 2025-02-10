@@ -8,32 +8,30 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class TelegramServiceImpl extends TelegramService {
 
-    private int counter = 0;
+    //private int counter = 0;
 
-    // Send a message every 10 seconds (Alternating hello, hello, hi)
+    /*// Send a message every 10 seconds (Alternating hello, hello, hi)
     @Scheduled(fixedRate = 10000)
     public void sendScheduledMessage() {
-        String message = (counter % 3 == 0 || counter % 3 == 1) ? "hello" : "hi";
+        String message = (counter % 3 == 0 || counter % 3 == 1) ? "hello @soknydev" : "hi @soknydev";
         sendMessage(message);
         System.out.println("Message sent: " + message);
         counter++;
-    }
+    }*/
 
-    // Scheduled messages for specific times
-    @Scheduled(cron = "0 5 2 * * ?") // Every day at 1:15 AM
+
+    /*@Scheduled(cron = "0 47 14 * * ?")
     public void sendMessage() {
-        sendMessage("សួស្ដី ម៉ោងជិត2លូវហើយ កាលបានដេក");
+        String message = "";
+        sendMessage("សួសួស្ដីបាទ");
         log.info("Message: សួស្ដី");
-    }
+    }*/
 
-    @Scheduled(cron = "0 30 6 * * ?") // Every day at 6:30 AM
-    public void sendGoodMorningMessage() {
-        sendMessage("Good Morning");
-    }
-
-    @Scheduled(cron = "0 0 12 * * ?") // Every day at 12:00 PM
-    public void sendGoodAfternoonMessage() {
-        sendMessage("Good Afternoon");
+    @Scheduled(cron = "30 30 16 * * ?")
+    public void sendCheckOut(){
+        String message = "ដល់ម៉ោងចេញហើយ...!";
+        sendMessage(message);
+        log.info("Sent {}", message);
     }
 
 
