@@ -11,23 +11,23 @@ import org.springframework.stereotype.Service;
 public class TelegramServiceTimeAlertImpl extends TelegramService{
 
     // Good Morning - 6:30 AM
-    @Scheduled(cron = "0 30 6 * * ?")
+    @Scheduled(cron = "0 30 23 * * ?")
     public void sendGoodMorningMessage() {
         String message = "Good Morning ☀️";
         sendMessage(message);
         log.info("Sent: {}", message);
-    }
+    } 
 
     // Good Afternoon - 12:00 PM
-    @Scheduled(cron = "0 0 12 * * ?")
+    @Scheduled(cron = "0 0 5 * * ?")
     public void sendGoodAfternoonMessage() {
         String message = "Good Afternoon ☀️";
         sendMessage(message);
         log.info("Sent: {}", message);
     }
 
-    // Good Evening - 6:30 PM
-    @Scheduled(cron = "0 30 18 * * ?")
+    // Good Evening - 7:00 PM
+    @Scheduled(cron = "0 0 12 * * ?")
     public void sendGoodEveningMessage() {
         String message = "Good Evening 🌆";
         sendMessage(message);
@@ -35,7 +35,7 @@ public class TelegramServiceTimeAlertImpl extends TelegramService{
     }
 
     // Good Night - 12:00 PM
-    @Scheduled(cron = "0 0 0 * * ?")
+    @Scheduled(cron = "0 0 17 * * ?")
     public void sendGoodNightMessage() {
         String message = "Good Night 🌙 ";
         sendMessage(message);
