@@ -8,23 +8,29 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class TelegramServiceImpl extends TelegramService {
 
-    private int counter = 0;
+    //private int counter = 1;
 
-    /*// Send a message every 10 seconds (Alternating hello, hello, hi)
-    @Scheduled(fixedRate = 10000)
-    public void sendScheduledMessage() {
-        String message = (counter % 3 == 0 || counter % 3 == 1) ? "hello " : "hi";
-        sendMessage(message);
-        System.out.println("Message sent: " + message);
-        counter++;
-    }*/
+//    // Send a message every 10 seconds (Alternating hello, hello, hi)
+//    @Scheduled(fixedRate = 10000)
+//    public void sendScheduledMessage() {
+//        String message = (counter % 3 == 0 || counter % 3 == 1) ? "hello " : "hi";
+//        sendMessage(message);
+//        System.out.println("Message sent: " + message);
+//        counter++;
+//    }
 
-   @Scheduled(cron = "33 14 14 * * ?")
-    public void sendCheckOut(){
-        String message = "ដល់ម៉ោងចេញហើយ...!";
-        sendMessage(message);
-        log.info("Sent {}", message);
-    }
+//    @Scheduled(fixedRate = 10000)
+//    public void sendMessageEverySecond() {
+//        sendMessage(String.valueOf(counter));
+//        counter+=1;
+//    }
+
+//   @Scheduled(cron = "33 14 14 * * ?")
+//    public void sendCheckOut(){
+//        String message = "ដល់ម៉ោងចេញហើយ...!";
+//        sendMessage(message);
+//        log.info("Sent {}", message);
+//    }
 
 
 

@@ -10,8 +10,8 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class TelegramServiceTimeAlertImpl extends TelegramService{
 
-    // Good Morning - 6:30 AM
-    @Scheduled(cron = "0 30 23 * * ?")
+    // Good Morning - 6:00 AM
+    @Scheduled(cron = "0 0 23 * * ?")
     public void sendGoodMorningMessage() {
         String message = "Good Morning ☀️";
         sendMessage(message);

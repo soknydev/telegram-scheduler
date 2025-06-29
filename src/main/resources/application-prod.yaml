@@ -3,8 +3,8 @@ spring:
     name: telegram-scheduler
 
 telegram:
-  bot-token: "7243786455:AAEC-fiu6dxcraM4jz1Sw_kBulH2tGvQKD8"
-  chat-id: "-4624937933"
+  bot-token: "8025295373:AAHrOSvXN1axtr3OkT3LPyiLpwAqjU_qCzY"
+  chat-id: "-4896503991"
 
 server:
   port: 8088
